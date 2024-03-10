@@ -14,19 +14,16 @@ currentDateParagraph.textContent = formattedDate;
 
 /* 
 
-Step 19
-The .reverse() method is used to reverse an array in place. For example:
+Step 20
+Finally, you need to create a string with the reversed array elements separated by dash (-) character.
 
-const array = [1, 2, 3, 4, 5];
-array.reverse();
-console.log(array); // [5, 4, 3, 2, 1]
-Chain the .reverse() method to the end of .split() method.
+Use the .join() method to join the reversed array elements into a string and use a "-" for the separator.
 
 */
 
 dateOptionsSelectElement.addEventListener('change', () => {
     switch (dateOptionsSelectElement.value) {
         case 'yyyy-mm-dd':
-            currentDateParagraph.textContent = formattedDate.split('-').reverse()
+            currentDateParagraph.textContent = formattedDate.split('-').reverse().join('-')
     };
 });
