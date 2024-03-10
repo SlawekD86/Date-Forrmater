@@ -7,14 +7,13 @@ const day = date.getDate();
 const month = date.getMonth() + 1;
 const year = date.getFullYear();
 const hour = date.getHours();
+const minutes = date.getMinutes();
 
 /* 
 
-Step 8
-The .getMinutes() method returns a number between 0 and 59 which represents the minutes for the provided date.
-
-Create a const variable named minutes and assign it the minutes from date with the .getMinutes() method.
+Step 9
+Next, create a const variable named formattedDate and assign it empty template literals.
 
 */
 
-const minutes = date.getMinutes();
+const formattedDate = ``;
