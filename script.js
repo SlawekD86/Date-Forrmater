@@ -3,19 +3,17 @@ const currentDateParagraph = document.getElementById('current-date');
 const dateOptionsSelectElement = document.getElementById('date-options');
 
 const date = new Date();
+const day = date.getDate();
 
 /* 
 
-Step 4
-The Date object has a number of methods that allow you to get the date and time in different formats.
+Step 5
+The .getMonth() method returns a number between 0 and 11. This represents the month for the date provided, where 0 is January and 11 is December. Because the number this method returns is zero-based, you need to add 1 to it to get the expected month number.
 
-One of those is the .getDate() method, which returns a number between 1 and 31 that represents the day of the month for that date. For example:
+Using const, create a variable named month and assign it the month from date with the .getMonth() method.
 
-const date = new Date();
-const dayOfTheMonth = date.getDate();
-console.log(dayOfTheMonth); // 20
-Using const, create a variable named day and assign it the day of the month from date with the .getDate() method.
+Remember to add 1 to the number returned by .getMonth().
 
 */
 
-const day = date.getDate();
+const month = date.getMonth() + 1;
