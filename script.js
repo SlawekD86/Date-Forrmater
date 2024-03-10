@@ -14,29 +14,22 @@ currentDateParagraph.textContent = formattedDate;
 
 /* 
 
-Step 16
-When a user makes a selection from the dropdown menu, the function should get the user's value and display the date in their chosen date format. To do this, you can use the switch statement.
+Step 17
+When the user chooses the Year, Month, Day option from the dropdown, the date format should reflect this choice.
 
-A switch statement is used to compare an expression against multiple possible values and execute different code blocks based on the match. It's commonly used for branching logic.
+To do this, you can add a case clause in the switch statement that checks for a match against the expression expr, followed by code to run if there's a match. Here's an example where the case clause checks that expr is equal to the string case123:
 
-For example, here's how to compare the expression dayOfWeek against possible values:
-
-switch (dayOfWeek) {
-  case 1:
-    console.log("It's Monday!");
-    break;
-  case 2:
-    console.log("It's Tuesday!");
-    break;
-  // ...cases for other workdays
-  default:
-    console.log("It's the weekend!");
+switch (expr) {
+  case 'case123':
+    // Write your logic here
 }
-Create a switch statement and use dateOptionsSelectElement.value as the expression.
+Add a case where the value is yyyy-mm-dd. Inside the case, set the text content of currentDateParagraph to the value of formattedDate.
 
 */
 
 dateOptionsSelectElement.addEventListener('change', () => {
     switch (dateOptionsSelectElement.value) {
+        case 'yyyy-mm-dd':
+            currentDateParagraph.textContent = formattedDate;
     };
 });
