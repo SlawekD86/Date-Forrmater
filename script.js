@@ -4,16 +4,15 @@ const dateOptionsSelectElement = document.getElementById('date-options');
 
 const date = new Date();
 const day = date.getDate();
+const month = date.getMonth() + 1;
 
 /* 
 
-Step 5
-The .getMonth() method returns a number between 0 and 11. This represents the month for the date provided, where 0 is January and 11 is December. Because the number this method returns is zero-based, you need to add 1 to it to get the expected month number.
+Step 6
+The .getFullYear() method returns a number which represents the year for the provided date.
 
-Using const, create a variable named month and assign it the month from date with the .getMonth() method.
-
-Remember to add 1 to the number returned by .getMonth().
+Using const, create a variable named year and assign it the year from date with the .getFullYear() method.
 
 */
 
-const month = date.getMonth() + 1;
+const year = date.getFullYear();
