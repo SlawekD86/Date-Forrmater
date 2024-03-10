@@ -14,16 +14,27 @@ currentDateParagraph.textContent = formattedDate;
 
 /* 
 
-Step 20
-Finally, you need to create a string with the reversed array elements separated by dash (-) character.
+Step 21
+If your switch statement is going to have multiple cases, it is best practice to include a break statement.
 
-Use the .join() method to join the reversed array elements into a string and use a "-" for the separator.
+The break statement will tell the JavaScript interpreter to stop executing statements. Without adding a break statement at the end of each case block, the program will execute the code for all matching cases:
+
+switch (someVariable) {
+  case 'case123':
+    // Write your logic here
+    break; // Terminates the switch statement
+}
+Add a break statement to the end of your case block.
 
 */
 
 dateOptionsSelectElement.addEventListener('change', () => {
     switch (dateOptionsSelectElement.value) {
         case 'yyyy-mm-dd':
-            currentDateParagraph.textContent = formattedDate.split('-').reverse().join('-')
+            currentDateParagraph.textContent = formattedDate
+                .split('-')
+                .reverse()
+                .join('-')
+            break;
     };
 });
