@@ -5,14 +5,15 @@ const dateOptionsSelectElement = document.getElementById('date-options');
 const date = new Date();
 const day = date.getDate();
 const month = date.getMonth() + 1;
+const year = date.getFullYear();
 
 /* 
 
-Step 6
-The .getFullYear() method returns a number which represents the year for the provided date.
+Step 7
+The .getHours() method returns a number between 0 and 23. This represents the hour for the provided date, where 0 is midnight and 23 is 11 p.m.
 
-Using const, create a variable named year and assign it the year from date with the .getFullYear() method.
+Create a const variable named hours and assign it the hour from date with the .getHours() method.
 
 */
 
-const year = date.getFullYear();
+const hour = date.getHours();
