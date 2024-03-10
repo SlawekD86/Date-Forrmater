@@ -11,9 +11,9 @@ const minutes = date.getMinutes();
 
 /* 
 
-Step 9
-Next, create a const variable named formattedDate and assign it empty template literals.
+Step 10
+Inside the template literal, add an embedded expression that contains the day variable.
 
 */
 
-const formattedDate = ``;
+const formattedDate = `${day}`;
