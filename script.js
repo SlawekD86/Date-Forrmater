@@ -14,17 +14,10 @@ currentDateParagraph.textContent = formattedDate;
 
 /* 
 
-Step 21
-If your switch statement is going to have multiple cases, it is best practice to include a break statement.
+Step 22
+Add another case with the value mm-dd-yyyy-h-mm. Inside that case, set the text content of currentDateParagraph to empty template literals.
 
-The break statement will tell the JavaScript interpreter to stop executing statements. Without adding a break statement at the end of each case block, the program will execute the code for all matching cases:
-
-switch (someVariable) {
-  case 'case123':
-    // Write your logic here
-    break; // Terminates the switch statement
-}
-Add a break statement to the end of your case block.
+Also, make sure to include a break statement to terminate the switch statement.
 
 */
 
@@ -34,7 +27,10 @@ dateOptionsSelectElement.addEventListener('change', () => {
             currentDateParagraph.textContent = formattedDate
                 .split('-')
                 .reverse()
-                .join('-')
+                .join('-');
+            break;
+        case 'mm-dd-yyyy-h-mm':
+            currentDateParagraph.textContent = ``;
             break;
     };
 });
