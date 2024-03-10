@@ -14,10 +14,8 @@ currentDateParagraph.textContent = formattedDate;
 
 /* 
 
-Step 22
-Add another case with the value mm-dd-yyyy-h-mm. Inside that case, set the text content of currentDateParagraph to empty template literals.
-
-Also, make sure to include a break statement to terminate the switch statement.
+Step 23
+Inside the case for mm-dd-yyyy-h-mm, set the textContent property of currentDateParagraph to ${month}-${day}-${year} ${hours} Hours ${minutes} Minutes.
 
 */
 
@@ -30,7 +28,7 @@ dateOptionsSelectElement.addEventListener('change', () => {
                 .join('-');
             break;
         case 'mm-dd-yyyy-h-mm':
-            currentDateParagraph.textContent = ``;
+            currentDateParagraph.textContent = `${month}-${day}-${year} ${hour} Hours ${minutes} Minutes`;
             break;
     };
 });
