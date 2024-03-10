@@ -2,20 +2,20 @@
 const currentDateParagraph = document.getElementById('current-date');
 const dateOptionsSelectElement = document.getElementById('date-options');
 
+const date = new Date();
+
 /* 
 
-Step 3
-In JavaScript, there are many built-in constructors that create objects. A constructor is like a regular function, but starts with a capital letter, and is initialized with the new operator.
+Step 4
+The Date object has a number of methods that allow you to get the date and time in different formats.
 
-For example, you can use the Date() constructor with the new operator to create a new Date object that returns a string with the current date and time:
+One of those is the .getDate() method, which returns a number between 1 and 31 that represents the day of the month for that date. For example:
 
-const currentDate = new Date();
-console.log(currentDate);
-
-// Output:
-// Mon Aug 23 2021 15:31:00 GMT-0400 (Eastern Daylight Time)
-Create a new const variable called date and assign it a Date object with new Date().
+const date = new Date();
+const dayOfTheMonth = date.getDate();
+console.log(dayOfTheMonth); // 20
+Using const, create a variable named day and assign it the day of the month from date with the .getDate() method.
 
 */
 
-const date = new Date();
+const day = date.getDate();
