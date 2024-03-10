@@ -14,15 +14,19 @@ currentDateParagraph.textContent = formattedDate;
 
 /* 
 
-Step 18
-Split formattedDate into an array of substrings with the .split() method and use a "-" as the separator.
+Step 19
+The .reverse() method is used to reverse an array in place. For example:
+
+const array = [1, 2, 3, 4, 5];
+array.reverse();
+console.log(array); // [5, 4, 3, 2, 1]
+Chain the .reverse() method to the end of .split() method.
 
 */
 
 dateOptionsSelectElement.addEventListener('change', () => {
     switch (dateOptionsSelectElement.value) {
         case 'yyyy-mm-dd':
-            currentDateParagraph.textContent = formattedDate.split('-');
-
+            currentDateParagraph.textContent = formattedDate.split('-').reverse()
     };
 });
