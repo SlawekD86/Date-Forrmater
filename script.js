@@ -11,9 +11,9 @@ const minutes = date.getMinutes();
 
 /* 
 
-Step 10
-Inside the template literal, add an embedded expression that contains the day variable.
+Step 11
+After the day variable, add a dash (-) followed by another embedded expression that contains the month variable.
 
 */
 
-const formattedDate = `${day}`;
+const formattedDate = `${day} - ${month}`;
